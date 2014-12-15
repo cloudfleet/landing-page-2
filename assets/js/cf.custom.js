@@ -10,23 +10,39 @@ $(function () {
             $(".form-control").css("-webkit-appearance", "caret");
         }
         $("select.input-sm,select.input-lg ").css("line-height", "1.3");
+
+        positionFeatureBlocks();
     }
 
+    window.addEventListener("orientationchange", function() {
+        positionFeatureBlocks();
+        positionFeatures('.features .self-hosted-email .icon');
+        positionFeatures('.features .store-sync-share .icon');
+        positionFeatures('.features .cal-notes-contacts .icon');
+        positionFeatures('.features .security .icon');
 
 
+        positionFeatures('.features .security .cl-1');
+
+        alert('fuk');
+    }, false);
+
+    function positionFeatureBlocks(){
+        if ($(window).width() < 769 && $(window).width() > 424) {
 
 
-    // Responsive nav
-    selectnav('navigation', {
-        label: 'NAVIGATE...',
-        autoselect: false,
-        nested: true,
-        indent: "-"
-    });
+            $('.features .col-xs-12').removeClass('col-xs-12').addClass('col-xs-6');
+            // .features .col-xs-12
+        }
+        if ($(window).width() < 425) {
 
 
+            $('.features .col-xs-6').removeClass('col-xs-6').addClass('col-xs-12');
+            // .features .col-xs-12
+        }
 
 
+    }
 
     $(".animated").waypoint(function (direction) {
         var el = $(this),
@@ -59,6 +75,13 @@ $(function () {
                 $('#header').removeClass('colorHeader');
             }
         }
+        positionFeatures('.features .self-hosted-email .icon');
+        positionFeatures('.features .store-sync-share .icon');
+        positionFeatures('.features .cal-notes-contacts .icon');
+        positionFeatures('.features .security .icon');
+        positionFeatures('.features .security .cl-1');
+
+        positionFeatureBlocks();
     });
 
     $(window).resize(function () {
@@ -66,7 +89,9 @@ $(function () {
         positionFeatures('.features .store-sync-share .icon');
         positionFeatures('.features .cal-notes-contacts .icon');
         positionFeatures('.features .security .icon');
+        positionFeatures('.features .security .cl-1');
 
+        positionFeatureBlocks();
 
         if ($(window).width() < 767) {
             $('#header').removeClass('fixedHeader');
@@ -95,13 +120,28 @@ $(function () {
 
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-
+        //alert($($anchor.attr('id')));
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top) - 65
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
 
+
+    $('#team-tabs a[href="#team-4"]').tab('show');
+
+    if (!iOS || !android) {
+
+
+        $("#solution").hover(
+            function () {
+                $("#blimp-box").stop().fadeTo('slow', 0);
+            },
+            function () {
+                $("#blimp-box").stop().fadeTo('slow', 1);
+            }
+        );
+    }
 });
     
     

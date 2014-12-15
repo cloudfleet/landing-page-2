@@ -29,6 +29,8 @@ body {
     font-weight: 400;
     min-width: 320px;
     -webkit-font-smoothing: antialiased;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 ul {
@@ -123,6 +125,7 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.5s;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    max-width: 1280px;
 }
 
 #header.colorHeader {
@@ -387,37 +390,89 @@ ul.social-top li a i {
 00 - zeppelin
 ------------------------------------------------------------*/
 .zeppelin {
-    height: 440px;
-    background-image: url(../img/zeppelin.png);
-    background-size: cover;
-    background-position: center center;
+    max-height: 440px;
+    padding: 0;
+    position: relative;
+    border-bottom: 5px #2f2f2f solid
+}
+.zeppelin .img-stack {
+    margin: 0;
+    display: block;
+}
+.zeppelin .img-stack img:first-child {
+    position: relative;
+}
+.zeppelin .header-txt {
+    position: absolute;
+    top: 50%;
+    right: 23%;
 }
 
+.zeppelin .header-hc-l {
+    position: absolute;
+    top: 40%;
+    left: 0;
+}
+
+.zeppelin .header-hc-r {
+    position: absolute;
+    top: 60%;
+    right: 0;
+
+}
+.zeppelin .scrl-cloud-1 {
+    position: absolute;
+    top: 93%;
+    left: 8px;
+    z-index: 900;
+
+}
+.zeppelin .scrl-cloud-2 {
+    position: absolute;
+    top: 89%;
+    left: 79px;
+    z-index: 900;
+
+}
+.zeppelin .scrl-cloud-3 {
+    position: absolute;
+    top: 82%;
+    left: 5px;
+    z-index: 900;
+
+}
 /*
 00 - All-in-One Cloud Solution
 ------------------------------------------------------------*/
 .all-in-one {
-    height: 546px;
+    height: 295px;
     border-top: dotted 1px #b0b0b0;
-    border-bottom: dotted 1px #b0b0b0;
-    background-image: url(../img/blimp.png);
+    border-bottom: dotted 1px #000000;
+    background-image: url(../img/blimp-gray-scale.png);
     background-size: cover;
     background-position: center center;
     padding-top: 100px;
+    position: relative;
+    box-sizing: content-box;
 
 }
-
+.all-in-one .img-stack {
+    margin: 0;
+    display: block;
+}
+.all-in-one .img-stack img:first-child {
+    position: absolute;
+}
 .all-in-one h1 {
     color: #ffffff;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.77);
+    z-index: 999;
+    position: relative;
 }
-
 .all-in-one h3 {
     color: #ffffff;
-    font-weight: 600;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.77);
-}
 
+}
 .all-in-one h2 {
     color: #ffffff !important;
     font-weight: 600;
@@ -429,15 +484,22 @@ ul.social-top li a i {
 00 - Simple-ui
 ------------------------------------------------------------*/
 .simple-ui {
-    min-height: 400px;
     background-image: url(../img/simple-ui-bkrnd.png);
     background-size: cover;
     background-position: center center;
     background-color: #e26826;
     border-bottom: dotted 1px #000000;
 }
+.simple-ui .img-stack {
+    margin-top:0;
 
-.simple-ui h1, .simple-ui p, .contact h1, .contact h3, .contact p {
+}
+.simple-ui .ui-cl-1,.simple-ui .ui-icon-cl, .simple-ui .ui-cl-2 {
+    z-index: 900;
+    top: 125px;
+    left: -70px;
+}
+.all-in-one p, .simple-ui h1, .simple-ui p, .contact h1, .contact h3, .contact p {
     color: white;
 }
 
@@ -447,11 +509,8 @@ ul.social-top li a i {
 .features {
     min-height: 625px;
     background-image: url(../img/features-bkrnd.png);
-    background-size: cover;
-    background-position: center center;
     border-bottom: dotted 1px #b0b0b0;
 }
-
 .features h2 {
     background-color: #e26826;
     color: white;
@@ -459,9 +518,8 @@ ul.social-top li a i {
     font-size: 24px;
     margin: 0 !important;
     position: relative;
-    z-index: 997;
+    z-index: 998;
 }
-
 .features p {
     background-color: white;
     color: #2f2f2f;
@@ -470,13 +528,11 @@ ul.social-top li a i {
     min-height: 100px;
     font-size: 12px;
     position: relative;
-    z-index: 997;
+    z-index: 998;
 }
-
 .features .img-stack {
     height: 120px;
 }
-
 .features .more-features i {
     font-size: 60px;
     margin-top: 30px;
@@ -491,25 +547,21 @@ ul.social-top li a i {
     left: -8px;
     top: 1px;
 }
-
 .features .self-hosted-email .cl-2 {
     position: absolute;
-    z-index: 998;
+    z-index: 999;
 
 }
-
 .features .self-hosted-email .icon {
     position: absolute;
     z-index: 997;
 
 }
-
 .features .self-hosted-email .cl-3 {
     position: absolute;
     z-index: 996;
 
 }
-
 .features .self-hosted-email .cl-4 {
     position: absolute;
     z-index: 995;
@@ -524,20 +576,17 @@ ul.social-top li a i {
     position: absolute;
     z-index: 999;
 }
-
 .features .store-sync-share .cl-2 {
     position: absolute;
-    z-index: 998;
+    z-index: 999;
     top: 5px;
     left: 3px;
 }
-
 .features .store-sync-share .icon {
     position: absolute;
     z-index: 997;
 
 }
-
 .features .store-sync-share .cl-3 {
     position: absolute;
     z-index: 996;
@@ -552,25 +601,21 @@ ul.social-top li a i {
     top: 7px;
     left: -14px;
 }
-
 .features .cal-notes-contacts .cl-2 {
     position: absolute;
-    z-index: 998;
+    z-index: 999;
 
 }
-
 .features .cal-notes-contacts .icon {
     position: absolute;
     z-index: 997;
 
 }
-
 .features .cal-notes-contacts .cl-3 {
     position: absolute;
     z-index: 996;
 
 }
-
 .features .cal-notes-contacts .cl-4 {
     position: absolute;
     z-index: 995;
@@ -587,14 +632,12 @@ ul.social-top li a i {
     right: 2px;
     top: 3px;
 }
-
 .features .security .cl-2 {
     position: absolute;
     z-index: 997;
     right: 0px;
     top: 8px;
 }
-
 .features .security .icon {
     position: absolute;
     z-index: 998;
@@ -605,7 +648,7 @@ ul.social-top li a i {
 00 - subscribe
 ------------------------------------------------------------*/
 .subscribe {
-    min-height: 330px;
+    min-height: 246px;
     background-image: url(../img/subscribe-bkrnd.png);
     background-size: cover;
     background-position: center center;
@@ -617,14 +660,13 @@ ul.social-top li a i {
 00 - team
 ------------------------------------------------------------*/
 .the-team {
-    min-height: 465px;
+
     background-image: url(../img/features-bkrnd.png);
     background-size: cover;
     background-position: center center;
     border-bottom: dotted 1px #b0b0b0;
     padding-bottom: 0;
 }
-
 .team-members {
     margin-top: 50px;
     background-image: url(../img/team-bkrnd.png);
@@ -632,11 +674,9 @@ ul.social-top li a i {
     background-repeat: no-repeat;
     background-position: top left;
 }
-
 .team-members > ul > li {
     width: 14.28%;
 }
-
 .team-members > ul > li > a {
     padding: 0px;
     margin: 0px;
@@ -646,36 +686,31 @@ ul.social-top li a i {
     opacity: .5;
 
 }
-
 .team-members .member {
     height: 125px;
 
 }
-
 .team-members > ul > li.active > a {
     opacity: 1;
 }
-
 .team-members > ul > li.active > a .member {
     height: 125px;
     background-color: white;
 
 }
-
 .team-members > ul > li > a .member-title {
 
     background-color: #e26826;
     color: white;
     margin-bottom: -1px;
 }
-
 .team-members .member-desc {
     min-height: 100px;
     background-color: #e26826;
     color: white;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
-
 .team-members .member-desc h1 {
     color: white;
 }
@@ -684,7 +719,7 @@ ul.social-top li a i {
 00 - Contact
 ------------------------------------------------------------*/
 .contact {
-    min-height: 590px;
+    min-height: 400px;
     background-image: url(../img/contact-bkrnd.png);
     background-size: cover;
     background-position: center right;
@@ -696,7 +731,6 @@ ul.social-top li a i {
     text-align: left;
     color: white;
 }
-
 .contact h2 a {
     font-size: 42px;
 
@@ -705,7 +739,6 @@ ul.social-top li a i {
     font-size: 24px;
 
 }
-
 .contact-form .form-control {
     height: 36px;
     float: none;
@@ -715,72 +748,58 @@ ul.social-top li a i {
     border-color: transparent;
     border-style: solid;
 }
-
 .contact-form textarea {
     min-height: 190px;
     max-height: 300px;
 }
-
 .contact-form button {
     padding: 10px 18px;
     font-size: 14px;
 }
-
 .form-control {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-
 .form-control.has-error {
     border-color: #EC7063;
 }
-
 .form-control.has-error:focus {
     border-color: #EC7063;
 }
-
 .form-control:focus {
     border-color: #6CC3A0;
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-
 .form-control.no-border {
     border: 0px;
     border-radius: 0;
 }
-
 .form-control.rounded {
     border-radius: 100px;
 }
-
 /*
 00 - Nav bar
 ------------------------------------------------------------*/
 .selectnav {
     display: none;
 }
-
 ul.navbar-xs {
     margin-right: 10px;
 }
-
 ul.navbar-xs li {
     display: inline-block;
 }
-
 ul.navbar-xs li button.btn-header-search {
     margin: 0 5px 10px;
 }
-
 ul.navbar-xs li a {
     font-size: 21px;
     padding-top: 15px !important;
     padding-bottom: 15px !important;
     display: inline-block;
 }
-
 ul.navbar-xs li a:hover {
     background-color: transparent;
 }
@@ -811,9 +830,16 @@ ul.navbar-xs li a:hover {
     }
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
+    .navbar-header img {
+        width: 110px;
+    }
+    .navbar li a {
+        font-size: 11px;
+        padding-bottom: 14px;
+    }
     #header-space {
-        margin-top: 60px;
+        margin-top: 51px;
     }
 
     #nav-top {
@@ -835,7 +861,7 @@ ul.navbar-xs li a:hover {
     }
 
     .navbar-header a {
-        padding-top: 15px !important;
+        padding-top: 10px !important;
         padding-bottom: 15px !important;
     }
 
@@ -849,19 +875,236 @@ ul.navbar-xs li a:hover {
         border: none;
     }
 
-    .navbar-collapse {
-        background-color: #62707d;
-    }
 
-    .js .selectnav {
-        display: block;
-        width: 150px;
-        border: 1px #DDD solid;
-        margin: 30px auto;
-        padding: 5px;
+    #blimp-box, .zeppelin .scrl-cloud-1, .zeppelin .scrl-cloud-2, .zeppelin .scrl-cloud-3, .zeppelin .header-hc-r {
+        display: none;
+    }
+    .zeppelin .header-txt {
+        right: 5%;
+    }
+    .all-in-one {
+        height: 182px;
+    }
+    .features .img-stack {
+        margin-bottom: -10px;
+    }
+    .features .store-sync-share .cl-2 {
+        left: 39px;
+    }
+    .features .security .cl-1 {
+        right: 43px;
+    }
+    .simple-ui .simple-ui-txt {
+        margin-top: 50px;
+    }
+    .simple-ui .ui-cl-1, .simple-ui .ui-icon-cl, .simple-ui .ui-cl-2 {
+        top: 160px;
+    }
+    .team-members > ul > li > a .member-title {
+        height: 55px;
+        padding-top: 5px;
+    }
+    .team-members > ul > li.active > a .member, .team-members .member {
+        height: 100px;
     }
 }
+@media all and (width: 720px) {
+    .features .security .cl-1 {
+        right: 33px;
+    }
+}
+@media all and (max-width: 640px) {
+    #header-space {
+        margin-top: 50px;
+    }
+    #blimp-box, #blimp-box-gray-scale, .zeppelin .header-hc-l {
+        display: none;
+    }
+    .zeppelin .header-txt {
+        right: 2%;
+    }
+    .features .store-sync-share .cl-2 {
+        left: 10px;
+    }
+    .features .security .cl-1 {
+        right: 13px;
+    }
+}
+@media all and (width: 540px) {
+    .features .security .cl-1 {
+        right: 0;
+    }
+    .simple-ui .ui-cl-1, .simple-ui .ui-icon-cl, .simple-ui .ui-cl-2 {
+        top: 127px;
+    }
 
+}
+@media all and (max-width: 480px) {
+    .simple-ui .ui-cl-1, .simple-ui .ui-icon-cl, .simple-ui .ui-cl-2 {
+        top: 103px;
+    }
+    .simple-ui .simple-ui-txt {
+        margin-top: 78px;
+    }
+}
+@media all and (width: 424px) {
+    .features .security .cl-1 {
+        right: 63px;
+    }
+    .features .security .cl-2 {
+        right: 100px;
+    }
+    .features .cal-notes-contacts .cl-2 {
+        right: 10px;
+    }
+    .features .store-sync-share .cl-2 {
+        left: 63px;
+    }
+    .features .store-sync-share .cl-1 {
+        right: 20px;
+    }
+    .features .store-sync-share .cl-3 {
+        left: -50px;
+    }
+    .features .self-hosted-email .cl-1 {
+        left: 52px;
+    }
+    .features .self-hosted-email .cl-2 {
+        right: 40px;
+    }
+}
+@media all and (width: 414px) {
+    .features .security .cl-2 {
+        right: 80px;
+    }
+    .features .security .cl-1 {
+        right: 59px;
+    }
+    .features .store-sync-share .cl-3 {
+        left: -20px;
+    }
+    .features .store-sync-share .cl-2 {
+        left: 55px;
+    }
+    .features .store-sync-share .cl-1 {
+        right: 46px;
+    }
+    .features .self-hosted-email .cl-2 {
+        right: 16px;
+    }
+    .features .cal-notes-contacts .cl-2 {
+        right: 10px;
+    }
+}
+@media all and (width: 400px) {
+    .features .security .cl-1 {
+        right: 52px;
+    }
+}
+@media all and (width: 384px) {
+    .features .security .cl-1 {
+        right: 42px;
+    }
+
+}
+@media all and (width: 375px) {
+    .features .security .cl-1 {
+        right: 40px;
+    }
+}
+@media all and (width: 360px) {
+    .features .security .cl-1 {
+        right: 32px;
+    }
+
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+    .navbar-header img {
+        width: 110px;
+    }
+    .zeppelin {
+        display: none;
+    }
+    #header-space {
+        margin-top: 54px;
+    }
+    #header {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    .all-in-one {
+        padding-top: 16px;
+    }
+    .all-in-one h1, .features h1, .simple-ui-txt h1, .subscribe h1, .the-team h1, .contact h1 {
+        font-size: 30px;
+    }
+    .all-in-one h3, .features h3, .subscribe h3, .the-team h3, .contact h3 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    p {
+        font-size: 11px;
+    }
+    .features p {
+        height: 115px;
+        font-size: 14px;
+    }
+    .features h3 {
+        margin-bottom: 20px !important;
+    }
+    .features .img-stack {
+        margin-bottom: -9px;
+    }
+    .features h2 {
+        font-size: 30px;
+        font-weight: 400;
+        height: 50px;
+    }
+    .simple-ui .ui-cl-1, .simple-ui .ui-icon-cl, .simple-ui .ui-cl-2 {
+        top:50px;
+    }
+    .subscribe {
+        height: 250px;
+    }
+    .team-members {
+        margin-top: 80px;
+    }
+    .team-members .member-desc {
+        height: 150px;
+    }
+    .team-members > ul > li.active > a .member, .team-members .member {
+        display: none;
+    }
+    .team-members > ul > li {
+        -ms-transform: rotate(-90deg); /* IE 9 */
+        -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+        transform: rotate(-90deg);
+    }
+    .team-members > ul > li > a .member-title {
+        font-size: 13px;
+        line-height: 20px;
+        height: 44px;
+        font-family: "Open Sans", "Helvetica", "Arial";
+        width: 131px;
+
+
+    }
+
+    .team-members .nav-tabs>li.active>a, .team-members .nav-tabs>li.active>a:hover, .team-members .nav-tabs>li.active>a:focus {
+        border: none;
+    }
+    .team-members > ul > li.active > a .member {
+        opacity: 0;
+    }
+    .contact h2 a {
+        font-size: 30px;
+    }
+
+    .navbar-header a {
+        padding-top: 9px !important;
+    }
+}
 /*
 00 -Text color
 ------------------------------------------------------------*/
@@ -932,7 +1175,9 @@ ul.navbar-xs li a:hover {
 .span-orange {
     color: #e26826;
 }
-
+.span-orange.text-lowercase {
+   text-transform: lowercase;
+}
 /*
 00 - Background Color
 ------------------------------------------------------------*/
