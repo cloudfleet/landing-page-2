@@ -24,7 +24,7 @@ $(function () {
 
         positionFeatures('.features .security .cl-1');
 
-        alert('fuk');
+
     }, false);
 
     function positionFeatureBlocks(){
