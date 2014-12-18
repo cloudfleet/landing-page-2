@@ -778,6 +778,9 @@ ul.navbar-xs li a:hover {
     .team-members > ul > li > a .member-title {
         height: 53px;
     }
+    .all-in-one {
+        height: 250px;
+    }
 
 }
 @media all and (max-width: 991px) {
@@ -798,8 +801,29 @@ ul.navbar-xs li a:hover {
     .navbar-right {
         margin-right: -15px;
     }
+
+    .all-in-one {
+        height: 210px;
+    }
+
 }
+
+@media all and (max-width: 890px) {
+    .all-in-one {
+        height: 182px;
+    }
+
+    
+}
+
 @media all and (max-width: 768px) {
+    
+
+
+    .all-in-one .container-fluid {
+        display:none;
+    }
+
     .navbar-header img {
         width: 110px;
     }
@@ -850,9 +874,6 @@ ul.navbar-xs li a:hover {
     }
     .zeppelin .header-txt {
         right: 5%;
-    }
-    .all-in-one {
-        height: 182px;
     }
     .features .img-stack {
         margin-bottom: -10px;

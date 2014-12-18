@@ -93,27 +93,8 @@ $(function () {
 
         positionFeatureBlocks();
 
-        if ($(window).width() < 767) {
-            $('#header').removeClass('fixedHeader');
-            if (!iOS || !android) {
-                $('.all-in-one .container-fluid').css("display", 'none');
-            }
-        }
-        if (!iOS || !android) {
-            if ($(window).width() > 767) {
-                var newheight = $('.all-in-one .img-stack img:first-child').height();
-
-                $('.all-in-one').css("height", (newheight - 140));
-
-                $('.all-in-one .container-fluid').css("display", 'block');
-            }
-        }
-
     });
 
-    var newheight = $('.all-in-one .img-stack img:first-child').height();
-
-    $('.all-in-one').css("height", (newheight - 140));
 
     function positionFeatures(ic){
 
@@ -142,7 +123,7 @@ $(function () {
     });
 
 
-    $('#team-tabs a[href="#team-4"]').tab('show');
+    $('#team-tabs').find('a[href="#team-4"]').tab('show');
 
     if (!iOS || !android) {
 
