@@ -10,7 +10,7 @@ $(function () {
             $(".form-control").css("-webkit-appearance", "caret");
         }
         $("select.input-sm,select.input-lg ").css("line-height", "1.3");
-
+        $('.all-in-one .container-fluid').remove();
         positionFeatureBlocks();
     }
 
@@ -95,11 +95,25 @@ $(function () {
 
         if ($(window).width() < 767) {
             $('#header').removeClass('fixedHeader');
-
-
+            if (!iOS || !android) {
+                $('.all-in-one .container-fluid').css("display", 'none');
+            }
         }
+        if (!iOS || !android) {
+            if ($(window).width() > 767) {
+                var newheight = $('.all-in-one .img-stack img:first-child').height();
+
+                $('.all-in-one').css("height", (newheight - 140));
+
+                $('.all-in-one .container-fluid').css("display", 'block');
+            }
+        }
+
     });
 
+    var newheight = $('.all-in-one .img-stack img:first-child').height();
+
+    $('.all-in-one').css("height", (newheight - 140));
 
     function positionFeatures(ic){
 
