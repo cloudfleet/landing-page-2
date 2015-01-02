@@ -1,20 +1,43 @@
 $(function () {
 
     //////////     MOBILE CHECK    //////////
-    var iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
-    var android = /mobile|android/i.test(navigator.userAgent);
 
-    if (iOS || android) {
+
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+
+
+
+    if (isMobile.any()) {
         $("html").addClass("isMobile");
-        if (iOS) {
+        if (isMobile.iOS()) {
             $(".form-control").css("-webkit-appearance", "caret");
         }
         $("select.input-sm,select.input-lg ").css("line-height", "1.3");
-        $('.all-in-one .container-fluid').remove();
+        //$('.all-in-one .container-fluid').remove();
         positionFeatureBlocks();
     }
 
-    window.addEventListener("orientationchange", function() {
+    window.addEventListener("orientationchange", function () {
         positionFeatureBlocks();
         positionFeatures('.features .self-hosted-email .icon');
         positionFeatures('.features .store-sync-share .icon');
@@ -27,7 +50,7 @@ $(function () {
 
     }, false);
 
-    function positionFeatureBlocks(){
+    function positionFeatureBlocks() {
         if ($(window).width() < 769 && $(window).width() > 424) {
 
 
@@ -96,7 +119,7 @@ $(function () {
     });
 
 
-    function positionFeatures(ic){
+    function positionFeatures(ic) {
 
         var Icon = $(ic);
         var w = $('.features h2').width() + 30;
@@ -113,7 +136,7 @@ $(function () {
     positionFeatures('.features .security .icon');
 
 
-    $('a.page-scroll').bind('click', function(event) {
+    $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
         //alert($($anchor.attr('id')));
         $('html, body').stop().animate({
@@ -125,17 +148,18 @@ $(function () {
 
     $('#team-tabs').find('a[href="#team-4"]').tab('show');
 
-    if (!iOS || !android) {
+    if (!isMobile.any()) {
 
-
-        $("#solution").hover(
-            function () {
-                $("#blimp-box").stop().fadeTo('slow', 0);
-            },
-            function () {
-                $("#blimp-box").stop().fadeTo('slow', 1);
-            }
-        );
+        if ($(window).width() > 768) {
+            $("#solution").hover(
+                function () {
+                    $("#blimp-box").stop().fadeTo('slow', 0);
+                },
+                function () {
+                    $("#blimp-box").stop().fadeTo('slow', 1);
+                }
+            );
+        }
     }
 });
     
