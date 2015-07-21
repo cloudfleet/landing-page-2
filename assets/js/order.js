@@ -11,8 +11,8 @@ function cloudfleetSendOrder(){
   }
 
   var data = getFormData('#order-form');
-  //var api_base = 'https://spire.cloudfleet.io';
-  var api_base = 'http://localhost:8000';
+  var api_base = 'https://spire.cloudfleet.io';
+  //var api_base = 'http://localhost:8000';
   $.post(api_base + '/api/v1/blimp', JSON.stringify(data), function(){
     console.debug('order sent!');
     window.location.replace("/");
