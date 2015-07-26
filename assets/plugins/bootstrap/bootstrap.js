@@ -1580,7 +1580,7 @@ if (typeof jQuery === 'undefined') {
            placement == 'left'   ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
         /* placement == 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width   }
 
-  }
+  };
 
   Tooltip.prototype.getViewportAdjustedDelta = function (placement, pos, actualWidth, actualHeight) {
     var delta = { top: 0, left: 0 }

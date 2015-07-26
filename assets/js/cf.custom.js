@@ -34,18 +34,18 @@ $(function () {
         }
         $("select.input-sm,select.input-lg ").css("line-height", "1.3");
         //$('.all-in-one .container-fluid').remove();
-        positionFeatureBlocks();
+       // positionFeatureBlocks();
     }
 
     window.addEventListener("orientationchange", function () {
-        positionFeatureBlocks();
-        positionFeatures('.features .self-hosted-email .icon');
-        positionFeatures('.features .store-sync-share .icon');
-        positionFeatures('.features .cal-notes-contacts .icon');
-        positionFeatures('.features .security .icon');
-
-
-        positionFeatures('.features .security .cl-1');
+        //positionFeatureBlocks();
+        //positionFeatures('.features .self-hosted-email .icon');
+        //positionFeatures('.features .store-sync-share .icon');
+        //positionFeatures('.features .cal-notes-contacts .icon');
+        //positionFeatures('.features .security .icon');
+        //
+        //
+        //positionFeatures('.features .security .cl-1');
 
 
     }, false);
@@ -86,7 +86,13 @@ $(function () {
 
 
     $(window).scroll(function () {
+        console.log($(window).scrollTop())
         if ($(window).width() > 768) {
+            var reduceOpacity = $(window).scrollTop()/340;
+
+            $("#blimp-box-gray-scale").css('opacity', (1-reduceOpacity));
+
+
             if ($(window).scrollTop() > 70) {
                 $('#header').addClass('fixedHeader');
             } else {
@@ -98,43 +104,51 @@ $(function () {
                 $('#header').removeClass('colorHeader');
             }
         }
-        positionFeatures('.features .self-hosted-email .icon');
-        positionFeatures('.features .store-sync-share .icon');
-        positionFeatures('.features .cal-notes-contacts .icon');
-        positionFeatures('.features .security .icon');
-        positionFeatures('.features .security .cl-1');
-
-        positionFeatureBlocks();
+        //positionFeatures('.features .self-hosted-email .icon');
+        //positionFeatures('.features .store-sync-share .icon');
+        //positionFeatures('.features .cal-notes-contacts .icon');
+        //positionFeatures('.features .security .icon');
+        //positionFeatures('.features .security .cl-1');
+        //
+        //positionFeatureBlocks();
     });
 
     $(window).resize(function () {
-        positionFeatures('.features .self-hosted-email .icon');
-        positionFeatures('.features .store-sync-share .icon');
-        positionFeatures('.features .cal-notes-contacts .icon');
-        positionFeatures('.features .security .icon');
-        positionFeatures('.features .security .cl-1');
 
-        positionFeatureBlocks();
+        if ($(window).width() < 900) {
+            $("#blimp-box").css('opacity', (0));
+            $("#blimp-box-gray-scale").css('opacity', (0));
+            $(".all-in-one").css('height', 500);
+        } else {
+            $("#blimp-box").css('opacity', (1));
+            $(".all-in-one").css('height', 'auto');
+            if ($(window).width() > 768) {
+                var reduceOpacity = $(window).scrollTop()/340;
+                $("#blimp-box-gray-scale").css('opacity', (1-reduceOpacity));
+            }
+        }
 
+        //positionFeatures('.features .self-hosted-email .icon');
+        //positionFeatures('.features .store-sync-share .icon');
+        //positionFeatures('.features .cal-notes-contacts .icon');
+        //positionFeatures('.features .security .icon');
+        //positionFeatures('.features .security .cl-1');
+        //positionFeatureBlocks();
     });
 
-
+    $(window).resize();
     function positionFeatures(ic) {
-
         var Icon = $(ic);
         var w = $('.features h2').width() + 30;
         var iconW = Icon.width();
         var iconPos = (w - iconW) / 2;
-
         Icon.css('left', iconPos);
     }
 
-
-    positionFeatures('.features .self-hosted-email .icon');
-    positionFeatures('.features .store-sync-share .icon');
-    positionFeatures('.features .cal-notes-contacts .icon');
-    positionFeatures('.features .security .icon');
-
+    //positionFeatures('.features .self-hosted-email .icon');
+    //positionFeatures('.features .store-sync-share .icon');
+    //positionFeatures('.features .cal-notes-contacts .icon');
+    //positionFeatures('.features .security .icon');
 
     $('a.page-scroll').bind('click', function (event) {
         var $anchor = $(this);
@@ -148,19 +162,19 @@ $(function () {
 
     $('#team-tabs').find('a[href="#team-4"]').tab('show');
 
-    if (!isMobile.any()) {
-
-        if ($(window).width() > 768) {
-            $("#solution").hover(
-                function () {
-                    $("#blimp-box").stop().fadeTo('slow', 0);
-                },
-                function () {
-                    $("#blimp-box").stop().fadeTo('slow', 1);
-                }
-            );
-        }
-    }
+    //if (!isMobile.any()) {
+    //
+    //    if ($(window).width() > 768) {
+    //        $("#solution").hover(
+    //            function () {
+    //                $("#blimp-box-gray-scale").stop().fadeTo('slow', 1);
+    //            },
+    //            function () {
+    //                $("#blimp-box").stop().fadeTo('slow', 0);
+    //            }
+    //        );
+    //    }
+    //}
 });
     
     
