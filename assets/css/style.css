@@ -77,10 +77,7 @@ label {
 label.lighter {
     font-weight: 300;
 }
-.tab-content {
-    display: -webkit-box;
-    display: flex;
-}
+
 textarea {
     -webkit-transition: height 0.2s;
     -moz-transition: height 0.2s;
@@ -719,6 +716,7 @@ ul.social-top li a i {
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
+    height: 130px;
 }
 .team-members .member-desc h1 {
     color: white;
