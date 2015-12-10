@@ -1,0 +1,60 @@
+@import "variables";
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  background: $white;
+  color: #717171;
+  font-family: $secondary-font, serif;
+  font-weight: 400;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
+  border-left: 1px solid #A9A6A6;
+  border-right: 1px solid #A9A6A6;
+  &::-webkit-scrollbar {
+    background: #f2f0eb;
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #cdcdcd;
+  }
+}
+
+::-moz-selection {
+  background-color: #0aa699;
+  color: white;
+}
+
+::selection {
+  background-color: #0aa699;
+  color: white;
+}
+
+a, a:hover, a:visited {
+  color: #e26826;
+}
+
+a:hover {
+  color: #b0b0b0;
+  text-decoration: none;
+}
+
+.white {
+  color: $white;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $primary-font;
+
+}
+h2 {
+  font-family: $sub-title-font;
+  font-weight: 300;
+}

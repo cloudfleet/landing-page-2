@@ -1,0 +1,56 @@
+@import "variables";
+
+section {
+  &.all-in-one {
+    border-top: dotted 1px #b0b0b0;
+    border-bottom: dotted 1px #000000;
+    background-image: url(../images/blimp-gray-scale.png);
+    background-size: cover;
+    background-position: center center;
+    /*padding-top: 100px;*/
+    position: relative;
+    box-sizing: content-box;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .img-stack {
+      margin: 0;
+      display: block;
+      position: relative;
+      .img-responsive {
+        width: 100%!important;
+      }
+    }
+
+    h1 {
+      color: #ffffff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      position: relative;
+    }
+
+    h3 {
+      color: #ffffff;
+
+    }
+
+    h2 {
+      color: #ffffff !important;
+
+
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.77);
+    }
+
+    .all-in-one-text {
+      position:absolute;
+      top: 0;
+      padding: 10% 0 0 0;
+    }
+
+    .subscribe-title {
+      font-size: 38px;
+      letter-spacing: -4px;
+    }
+  }
+
+}

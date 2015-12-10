@@ -1,0 +1,84 @@
+@import "variables";
+/*
+00 - Contact
+------------------------------------------------------------*/
+footer {
+  color: $white;
+  .contact {
+    min-height: 400px;
+    background-image: url(../images/contact-bkrnd.png);
+    background-size: cover;
+    background-position: center right;
+    .secondChild {
+      margin-top: 40px;
+    }
+
+    h2 a {
+      font-size: 24px;
+      text-align: left;
+      color: white;
+    }
+    span.email-us {
+      font-size: 24px;
+
+    }
+  }
+
+  .contact-form {
+    h5 {
+      text-align: left;
+      color: white;
+    }
+    .form-control {
+      height: 36px;
+      float: none;
+      margin: 11px 0;
+      font-size: 16px;
+      border-width: 1px;
+      border-color: transparent;
+      border-style: solid;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      &.has-error {
+        border-color: #EC7063;
+      }
+      &.has-error:focus {
+        border-color: #EC7063;
+      }
+      &:focus {
+        border-color: #6CC3A0;
+        outline: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+      &.no-border {
+        border: 0px;
+        border-radius: 0;
+      }
+      &.rounded {
+        border-radius: 100px;
+      }
+    }
+    textarea {
+      min-height: 190px;
+      max-height: 300px;
+    }
+    button {
+      padding: 10px 18px;
+      font-size: 14px;
+    }
+  }
+
+
+  .bottom {
+    background-color: #000000;
+    font-family: $secondary-font;
+    font-size: 12px;
+    padding: 15px 0;
+    .copyright {
+      font-size: 10px;
+    }
+
+  }
+
+}

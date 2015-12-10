@@ -1,0 +1,31 @@
+@import "variables";
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+  header {
+    border-bottom: 5px #2f2f2f solid;
+    height: 100px;
+    .navbar-header {
+      a.navbar-brand {
+        padding: 0 !important;
+        img {
+          height: 64px;
+        }
+        .logo {
+          font-size: 32px;
+        }
+
+      }
+    }
+  }
+
+}
+@media screen and (max-width: 900px) {
+  #blimp-box, #blimp-box-gray-scale {
+    opacity: 0;
+  }
+  .all-in-one {
+    height: 500px;
+  }
+}
