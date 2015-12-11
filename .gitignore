@@ -1,5 +1,31 @@
 .idea
-bower_components
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*~
+
+pids
+logs
+results
+data
+
+npm-debug.log
 node_modules
+.vagrant
+.bowerrc
+public/duralumin
+
+# ignore the generator-angular files in root
+dist
 .tmp
 .sass-cache
+bower_components
+.raw
+
+# ignore the conf for proxying to your own blimp
+nginx-dev-ownblimp.conf
