@@ -8,9 +8,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic&subset=latin,cyrillic,latin-ext);
 
-@import url(../assets/plugins/form/icheck/skins/all.css);
+//@import url(../assets/plugins/form/icheck/skins/all.css);
 
-@import url(../assets/plugins/form/switch/switch.css);
+//@import url(../assets/plugins/form/switch/switch.css);
 
 @import url(animation.css);
 
@@ -47,7 +47,7 @@ ul {
 }
 
 h1 {
-  letter-spacing: -5px;
+  letter-spacing: -2px;
   font-family: 'Playfair Display', serif;
   font-weight: 300;
   margin: 0;
@@ -325,7 +325,7 @@ footer .bottom {
 /*}*/
 
 /*
-00 - social icon in header 
+00 - social icon in header
 ------------------------------------------------------------*/
 
 ul.social-top li {
@@ -347,7 +347,7 @@ ul.social-top li {
 }
 
 /*
-00 - navbar in header 
+00 - navbar in header
 ------------------------------------------------------------*/
 
 .navbar-header a {
