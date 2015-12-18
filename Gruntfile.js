@@ -18,7 +18,9 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
+    dist: 'dist',
+    repo: 'git@github.com:cloudfleet/landing-page-2.git',
+    repo_branch: 'production'
   };
 
   // Define the configuration for all the tasks
@@ -424,6 +426,22 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    // Deploy to production branch
+    buildcontrol: {
+      options: {
+        dir: '<%= yeoman.dist %>',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      production: {
+        options: {
+          remote: '<%= yeoman.repo %>',
+          branch: '<%= yeoman.repo_branch %>'
+        }
+      }
     }
   });
 
@@ -472,6 +490,12 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+
+
+  grunt.registerTask('deploy', [
+    'build',
+    'buildcontrol:production'
   ]);
 
   grunt.registerTask('default', [
