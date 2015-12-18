@@ -60,12 +60,22 @@ angular.module('cloudfleetApp')
 				},500);
         }
     };
-}).directive('mainFeatures', function() {
+}).directive('mainFeatures', function($timeout) {
     return {
         restrict: 'A',
 		replace:true,
 		templateUrl: 'views/features.html', 
         link: function(scope, element, attrs) {
+			$timeout(function(){
+				angular.element('.more-features a.page-scroll').bind('click', function (event) {
+					var $anchor = $(this);
+					//alert($($anchor.attr('id')));
+					angular.element('html, body').stop().animate({
+						scrollTop: ($($anchor.attr('href')).offset().top) - 65
+					}, 1500, 'easeInOutExpo');
+					event.preventDefault();
+				});
+			},500);
 			angular.element("#mainFeature .animated").waypoint(function (direction) {
 					
 					var el = $(this),
@@ -94,7 +104,7 @@ angular.module('cloudfleetApp')
         link: function(scope, element, attrs) {
 			angular.element('#team-tabs a').click(function(event){
 				event.preventDefault();
-			})
+			});
 			angular.element("#mainTeam .animated").waypoint(function (direction) {
 					
 					var el = $(this),
