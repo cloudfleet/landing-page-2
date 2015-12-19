@@ -16,8 +16,12 @@ Furthermode, that Compass has been installed via
 gem install compass
 ```
 
-Then one may run the following to pop up a browser on a local server
-(port 9000).  ``` npm install && bower install && grunt serve ```
+Then one may run the following to pop up a browser on a localhost server
+listening on port 9000:
+
+```
+npm install && bower install && grunt serve
+```
 
 ## Testing
 
