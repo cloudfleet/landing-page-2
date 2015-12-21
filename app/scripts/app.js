@@ -24,6 +24,14 @@ angular
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl'
             })
+            .when('/order', {
+                templateUrl: 'views/order.html',
+                controller: 'OrderCtrl'
+            })
+            .when('/technology', {
+                templateUrl: 'views/technology.html',
+                controller: 'TechnologyCtrl'
+            })
             /*.when('/home', {
              templateUrl: 'views/home.html',
              controller: 'HomectrlCtrl',
