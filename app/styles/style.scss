@@ -435,7 +435,7 @@ ul.social-top li {
 
 .highlight-title {
   font-size: 3.4em;
-  text-transform: capitalize;
+  //text-transform: capitalize;
   strong {
     text-transform: uppercase;
   }
@@ -608,10 +608,10 @@ ul.social-top li {
   p {
     background-color: white;
     color: #2f2f2f;
-    padding: 5px;
+    padding: 1em;
     border: dotted 1px #b0b0b0;
-    min-height: 100px;
-    font-size: 12px;
+    min-height: 112px;
+    font-size: 14px;
     position: relative;
     z-index: 998;
   }
