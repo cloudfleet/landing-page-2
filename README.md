@@ -23,6 +23,29 @@ listening on port 9000:
 npm install && bower install && grunt serve
 ```
 
+### Error in running bower
+
+Running bower may result in the following error
+
+```
+    ? May bower anonymously report usage statistics to improve the tool over time? (Y/n) [?25h
+
+    /opt/local/lib/node_modules/bower/node_modules/inquirer/node_modules/rx-lite/rx.lite.js:75
+        throw e;
+        ^
+
+    SyntaxError: Invalid regular expression: /.{1,0}/: numbers out of order in {} quantifier.
+        at new RegExp (native)
+        at breakLines (/opt/local/lib/node_modules/bower/node_modules/inquirer/lib/utils/screen-manager.js:108:15)
+        at ScreenManager.render (/opt/local/lib/node_modules/bower/node_modules/inquirer/lib/utils/screen-manager.js:55:
+```
+
+As suggested in <http://stackoverflow.com/questions/22387857/stop-bower-from-asking-for-statistics-when-installing> one may get past this error by using the following invocation of ```bower```:
+
+```
+bower --config.analytics=false install
+```
+
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
