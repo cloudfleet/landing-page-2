@@ -6,9 +6,9 @@ The AngularJS rewrite of the cloudfleet.io web content.
 
 Assuming that `npm` has been installed.
 
-And that Bower has been installed via
+And that both Bower and Grunt have been installed via
 ```
-npm install -g bower
+npm install -g bower grunt
 ```
 
 Furthermode, that Compass has been installed via
