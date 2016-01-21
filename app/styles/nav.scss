@@ -51,8 +51,11 @@ header {
         letter-spacing: -.04em;
         font-size: 22px;
         font-family: $primary-font;
+        font-weight: $primary-font-weight;
         span {
           color: #2F2F2F;
+          font-family: $secondary-font;
+          font-weight: $secondary-font-weight;
         }
       }
     }
