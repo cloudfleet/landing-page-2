@@ -375,6 +375,7 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
+            'Dockerfile', // production Dockerfile
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
